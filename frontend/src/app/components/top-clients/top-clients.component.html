@@ -1,0 +1,32 @@
+<div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+  <table class="w-full text-sm text-left text-gray-700">
+    <thead class="text-xs text-white uppercase bg-red-600">
+      <tr>
+        <th scope="col" class="px-6 py-3">Cliente</th>
+        <th scope="col" class="px-6 py-3">Ciudad</th>
+        <th scope="col" class="px-6 py-3">Ventas</th>
+        <th scope="col" class="px-6 py-3">Ganancias</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        *ngFor="let client of topClients"
+        class="bg-white border-b hover:bg-red-50"
+      >
+        <th
+          scope="row"
+          class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap"
+        >
+          {{ client.customer_name }}
+        </th>
+        <td class="px-6 py-4">{{ client.city }}</td>
+        <td class="px-6 py-4 text-green-600">
+          {{ client.total_sales | currency }}
+        </td>
+        <td class="px-6 py-4 text-green-600">
+          {{ client.total_profit | currency }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

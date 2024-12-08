@@ -1,0 +1,13 @@
+<div class="bg-white shadow-md rounded-lg p-6 mb-6">
+  <div class="relative w-full min-h-[10vh] max-h-[80vh] 
+              min-[450px]:h-[20vh] max-[767px]:h-[30vh] 
+              min-[1280px]:h-[80vh]">
+    <canvas
+      baseChart
+      [datasets]="chartData"
+      [labels]="chartLabels"
+      option="chartOptions"
+      type="line"
+    ></canvas>
+  </div>
+</div>
